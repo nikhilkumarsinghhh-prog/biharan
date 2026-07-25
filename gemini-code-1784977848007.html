@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Biharan Riya Raj 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #feada6 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            padding: 15px;
+        }
+
+        /* Floating Background Hearts */
+        .bg-heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.7);
+            animation: float 6s infinite linear;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Card Container */
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            padding: 25px 20px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(255, 75, 110, 0.3);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+            border: 3px solid #ff4b6e;
+            position: relative;
+            z-index: 10;
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 10px 25px rgba(255, 75, 110, 0.3); }
+            100% { box-shadow: 0 15px 40px rgba(255, 23, 68, 0.6); }
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #d81b60;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #444;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #ff4b6e, #ff758c);
+            color: white;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 75, 110, 0.4);
+            transition: transform 0.2s ease, background 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.08);
+        }
+
+        .btn-no {
+            background: linear-gradient(45deg, #757575, #9e9e9e);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Photo Frame */
+        .media-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 15px 0;
+            border: 3px solid #ff4b6e;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .media-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: popIn 0.5s ease-out;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .caption-box {
+            background: #fff0f3;
+            color: #c2185b;
+            padding: 12px 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px dashed #ff4b6e;
+        }
+
+        /* Love Letter Box */
+        .letter-box {
+            background: #fff5f7;
+            border: 2px dashed #ff4b6e;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: left;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Finale 5-Photo Grid */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 95px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #ff4b6e;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .forever-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 34px;
+            color: #ff1744;
+            margin-top: 15px;
+            animation: pulse 1.2s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+
+        /* Angry Screen Overlay */
+        .angry-box {
+            display: none;
+            text-align: center;
+            animation: popIn 0.3s ease;
+        }
+
+        .angry-emoji {
+            font-size: 60px;
+            margin: 10px 0;
+            animation: shake 0.5s infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            40% { transform: translate(1px, -1px) rotate(-1deg); }
+            60% { transform: translate(-1px, 2px) rotate(0deg); }
+            80% { transform: translate(1px, 1px) rotate(1deg); }
+            100% { transform: translate(0px, -2px) rotate(-1deg); }
+        }
+
+        /* Screen Display Logic */
+        .screen { display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body>
+
+    <div id="heartsContainer"></div>
+
+    <div class="card">
+
+        <!-- ================= SCREEN 1: DO YOU LOVE ME ================= -->
+        <div id="screen-proposal" class="screen active">
+            <div id="normal-ask">
+                <h1>Riya Raj... 👀❤️</h1>
+                <p style="font-size: 18px; font-weight: 700; color: #ff4b6e; margin-top: 15px;">
+                    Do You Love Me? 🥺👉👈
+                </p>
+                <div class="btn-container">
+                    <button class="btn" onclick="sayYes()">Yes! 💖</button>
+                    <button class="btn btn-no" onclick="sayNo()">No 💔</button>
+                </div>
+            </div>
+
+            <!-- Angry Response when NO is clicked -->
+            <div id="angry-ask" class="angry-box">
+                <div class="angry-emoji">😠😡😾</div>
+                <h1 style="color: #d50000; font-size: 28px;">Acha?! Mujhe Naa bologii?! 😡</h1>
+                <p style="font-weight: 600; color: #333; margin-top: 10px;">
+                    Aisa koi option hi nahi hai! Chup chap "Haa" bolo! 😤❤️
+                </p>
+                <button class="btn" style="margin-top: 20px;" onclick="sayYes()">Acha Baba YES! 💖🥰</button>
+            </div>
+        </div>
+
+        <!-- ================= SCREEN 2: LOVE LETTER ================= -->
+        <div id="screen-letter" class="screen">
+            <h1>My Dearest Riya 💌</h1>
+            <div class="letter-box">
+                <p><strong>Meri Biharan,</strong></p>
+                <p style="margin-top: 8px;">
+                    Aap mere liye kitni special ho yeh shabdon me batana mushkil hai. Aapki bholi si baatein aur pyaari si smile mera poora din bana deti hai! ✨
+                </p>
+                <p style="margin-top: 8px;">
+                    Aapke saath bitaya har ek pal mere dil ke sabse kareeb hai. Yeh chota sa safar humari yaadon ka hai... ❤️
+                </p>
+            </div>
+            <button class="btn" onclick="startMemories()">Our Memories, My Biharan 📸❤️</button>
+        </div>
+
+        <!-- ================= SCREEN 3: ONE-BY-ONE MEMORIES ================= -->
+        <div id="screen-memories" class="screen">
+            <h1 id="memory-title">Yaad #1</h1>
+            
+            <div class="media-container" id="media-box">
+                <!-- Individual Photo Loads Here -->
+            </div>
+
+            <div class="caption-box" id="caption-box">
+                Caption yahan aayega...
+            </div>
+
+            <button class="btn" onclick="nextMemory()">Agli Yaad Dekho 💖</button>
+        </div>
+
+        <!-- ================= SCREEN 4: FINALE (5 PHOTOS + LOVE YOU) ================= -->
+        <div id="screen-finale" class="screen">
+            <h1>Always & Forever 💕</h1>
+            <p>Riya, aap mere liye duniya ki sabse pyari ladki ho!</p>
+
+            <!-- 5 Photos Grid -->
+            <div class="photo-grid">
+                <img id="grid-img-1" src="" alt="Photo 1">
+                <img id="grid-img-2" src="" alt="Photo 2">
+                <img id="grid-img-3" src="" alt="Photo 3">
+                <img id="grid-img-4" src="" alt="Photo 4">
+                <img id="grid-img-5" src="" alt="Photo 5">
+            </div>
+
+            <div class="forever-text">
+                I LOVE YOU SO MUCH RIYA! 💖✨
+            </div>
+            <p style="color: #666; font-size: 13px; margin-top: 5px;">~ You Are My Love For Forever, Meri Biharan ~</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Floating Background Hearts
+        function createHearts() {
+            const container = document.getElementById('heartsContainer');
+            const heartIcons = ['❤️', '💖', '💕', '💗', '✨', '🌸'];
+            for(let i = 0; i < 25; i++) {
+                let heart = document.createElement('div');
+                heart.className = 'bg-heart';
+                heart.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+                container.appendChild(heart);
+            }
+        }
+        createHearts();
+
+        // 5 Google Drive Direct Converted Photo Links
+        const photoLinks = [
+            "https://lh3.googleusercontent.com/d/14SWCD4-wisGttQDL9vHNDMvqsNWn_Mhx",
+            "https://lh3.googleusercontent.com/d/1XBLk5LTT_pT1qiPp_Zj-Eg_2ILjrrlGZ",
+            "https://lh3.googleusercontent.com/d/1LFHb-RH_g_828drRzm6PoW7X84RWFN0f",
+            "https://lh3.googleusercontent.com/d/1kVK3Vxo9bvTZjQ92jGP3brzU2Uo_QVfO",
+            "https://lh3.googleusercontent.com/d/1MYvxlMM8M4CnH6ZE4UYkXFsvQ410SlPW"
+        ];
+
+        const captions = [
+            "Riya Raj, aapke saath har pal khoobsurat lagta hai! 🥰",
+            "Aapki bholi si muskaan mera din bana deti hai! ✨",
+            "Meri Biharan, aapke saath baat karna bohot accha lagta hai! ❤️",
+            "Aap mere liye bohot special ho Riya! 💕",
+            "Yeh saare lamhe mere dil ke bohot kareeb hain! 💖"
+        ];
+
+        let currentIndex = 0;
+
+        function sayNo() {
+            document.getElementById('normal-ask').style.display = 'none';
+            document.getElementById('angry-ask').style.display = 'block';
+        }
+
+        function sayYes() {
+            document.getElementById('screen-proposal').classList.remove('active');
+            document.getElementById('screen-letter').classList.add('active');
+        }
+
+        function startMemories() {
+            document.getElementById('screen-letter').classList.remove('active');
+            document.getElementById('screen-memories').classList.add('active');
+            loadMemory(0);
+        }
+
+        function loadMemory(index) {
+            const mediaBox = document.getElementById('media-box');
+            const captionBox = document.getElementById('caption-box');
+            const title = document.getElementById('memory-title');
+
+            title.innerText = `Yaad #${index + 1} 💖`;
+            captionBox.innerText = captions[index];
+            mediaBox.innerHTML = `<img src="${photoLinks[index]}" alt="Memory ${index + 1}">`;
+        }
+
+        function nextMemory() {
+            currentIndex++;
+            if (currentIndex < photoLinks.length) {
+                loadMemory(currentIndex);
+            } else {
+                document.getElementById('screen-memories').classList.remove('active');
+                document.getElementById('screen-finale').classList.add('active');
+
+                for (let i = 0; i < 5; i++) {
+                    document.getElementById(`grid-img-${i+1}`).src = photoLinks[i];
+                }
+            }
+        }
+    </script>
+</body>
+</html>
